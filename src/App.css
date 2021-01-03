@@ -1,9 +1,72 @@
+:root {
+    --primary: #f86d72;
+    --bg-header: #fff;
+    --fg-header: #444;
+    --fs-header: 1.1em;
+}
+body {
+    font-family: Lato, sans-serif;
+    background-color: rgb(31, 41, 55);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+a {
+    color: inherit;
+}
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 .svg-icon {
-	height  : 1em;
-    fill    : currentcolor;
+    height: var(--fs-header);
+    fill: currentcolor;
+}
+
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container,
+    .container-sm {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container,
+    .container-sm,
+    .container-md {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container,
+    .container-sm,
+    .container-md,
+    .container-lg {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl {
+        max-width: 1140px;
+    }
 }
