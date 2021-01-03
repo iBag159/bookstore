@@ -1,0 +1,8 @@
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__social-media{
+    display: flex;
+    align-self: flex-end;
+}
