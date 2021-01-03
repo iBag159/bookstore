@@ -1,0 +1,19 @@
+.header {
+    display: flex;   
+}
+.header__main {
+    display: flex;
+}
+.header__main a{
+    display: block;
+    padding: .5em 2em;
+    text-decoration: none;
+}
+.header__tools {
+    display: flex;
+    align-self: flex-end;
+}
+.header__tools a {
+    display: block;
+    padding: .5em;
+}
