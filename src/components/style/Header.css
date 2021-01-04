@@ -52,6 +52,7 @@
     background-color: white;
     box-shadow: 0 1px 10px 0 hsla(0,0%,56%,.75);
     color: initial;
+    z-index: 2;
 }
 .header__main li > ul li {
     border-bottom: 1px solid #f5f5f5;

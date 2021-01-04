@@ -1,8 +1,13 @@
 :root {
     --primary: #f86d72;
+    --pink: #fbadaf;
+    --purple: #e6afcd;
+    --lightblue: #96d5e2;
     --bg-header: #fff;
     --fg-header: #444;
     --fs-header: 1.1em;
+    --bg-categories: #EAEAEA;
+    --tr-categories: .2s all;
 }
 body {
     font-family: Lato, sans-serif;
@@ -18,6 +23,12 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+p {
+    line-height: 1.5;
+}
+button {
+    border: none;
 }
 .svg-icon {
     height: var(--fs-header);
@@ -69,5 +80,32 @@ ul {
     .container-xl {
         max-width: 1140px;
     }
+}
+.btn {
+    color: var(--fg-header);
+    padding: 1em 2em;
+    text-transform: capitalize;
+    font-size: .75em;
+    font-weight: 700;
+    background: #fff;
+    display: inline-block;
+    box-shadow: 0 13px 29.4px 0.6px rgba(43,43,43,.25);
+    outline: 0;
+    cursor: pointer;
+}
+.btn-primary:focus,
+.btn-primary:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.bg-pink {
+    background-color: var(--pink);
+}
+.bg-purple {
+    background-color: var(--purple);
+}
+.bg-lightblue {
+    background-color: var(--lightblue);
 }
 
