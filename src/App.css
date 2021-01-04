@@ -8,7 +8,12 @@
     --fs-header: 1.1em;
     --bg-categories: #EAEAEA;
     --tr-categories: .2s all;
+    --bg-footer: rgb(239, 239, 239);
+    --fg-footer: rgb(0, 0, 0);
+    --fs-footer: 1.1em;
+
 }
+
 body {
     font-family: Lato, sans-serif;
     background-color: rgb(31, 41, 55);
