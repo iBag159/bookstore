@@ -1,0 +1,13 @@
+.cellbook__list{
+  display: grid;
+  grid-template-columns: repeat(5, 180px);
+  grid-gap: 25px;
+  justify-content: center;
+  padding: 8em 0;
+}
+li {
+    list-style:none;
+}
+
+
+
