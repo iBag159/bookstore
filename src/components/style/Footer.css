@@ -3,8 +3,7 @@
     padding: 2em 0;
     font-size: var(--fs--footer);
     color: var(--fg--footer);
-    position: absolute;
-    bottom: 0;
+    
     width: 100%;
     height: 30%;
     

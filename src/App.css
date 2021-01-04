@@ -11,12 +11,13 @@
     --bg-footer: rgb(239, 239, 239);
     --fg-footer: rgb(0, 0, 0);
     --fs-footer: 1.1em;
+    --fg-info-author: rgb(90, 88, 88);
 
 }
 
 body {
     font-family: Lato, sans-serif;
-    background-color: rgb(31, 41, 55);
+    background-color: rgb(255, 255, 255);
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;

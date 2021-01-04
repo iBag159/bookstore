@@ -1,0 +1,69 @@
+
+ 
+ 
+  /* Add some padding inside the card container */
+  
+  .card__cellbook__img img{
+    width:100%;
+    box-shadow: 2px 2px 12px 4px rgba(0,0,0,0.2);
+    
+  }
+  
+  .card__cellbook__img{
+    position: relative;
+    display: inline-block;
+    
+  }
+  .book__img-menu{
+   position: absolute;
+   top: 35%;
+   left: 40%;
+   
+  }
+  .card__cellbook__img .book__img-menu {
+    margin: 0.4em;
+    
+   }
+   .card__cellbook__img:hover .book__img-container {
+    transition: opacity 0.7s;
+    opacity:1 ;
+  }  
+   .card__cellbook__img:hover  
+   {
+     transition: opacity 0.5s;
+     opacity: 0.3;
+   }
+   .book__img-container {
+    opacity:0;
+   }
+   .card__cellbook__img:hover .book__img-container {
+     transition: opacity 0.7s;
+     opacity: 1;
+   }
+  
+ .card__cellbook__img .book__img-menu{
+  transform: scale(2.05, 2.05);
+ }
+  
+ 
+
+  
+  .container__cellbook__info {
+    font-family: Lato;
+    padding: 12px 0;
+    display:list-item;
+    
+  }
+
+  .cellbook__info-author{
+     font-size:small;
+     color: var(--fg-info-author);
+     margin: 0.5em 0;
+  }
+  .cellbook__info-price{
+    font-size:small;
+    color: var(--primary);
+    margin: 1.5em 0;
+ }
+
+  
