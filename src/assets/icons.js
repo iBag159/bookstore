@@ -119,6 +119,26 @@ const svgs = {
             </React.Fragment>
         )
     ),
+    linefoot: new Icon(
+        "0 0 50 4",
+        (
+            <React.Fragment>
+                <path d="M0 2H50" stroke="black" stroke-width="1.5"/>
+                <path d="M28.4667 0H21.5333C21.2388 0 21 0.896 21 2C21 3.104 21.2388 4 21.5333 4H28.4667C28.7612 4 29 3.104 29 2C29 0.896 28.7612 0 28.4667 0Z" fill="black"/>
+
+            </React.Fragment>
+        )
+    ),
+    linef: new Icon(
+        "0 0 492 10",
+        (
+            <React.Fragment>
+                <path d="M0 5.25H492" stroke="black" stroke-width="1.5"/>
+                <path d="M292 0H227C224.239 0 222 2.24 222 5C222 7.76 224.239 10 227 10H292C294.761 10 297 7.76 297 5C297 2.24 294.761 0 292 0Z" fill="black"/>
+
+            </React.Fragment>
+        )
+    ),
     search: new Icon(
         "0 0 612.01 612.01",
         (
@@ -128,3 +148,4 @@ const svgs = {
     default: null,
 };
 export default svgs;
+

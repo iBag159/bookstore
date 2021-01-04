@@ -3,7 +3,11 @@
     --bg-header: #fff;
     --fg-header: #444;
     --fs-header: 1.1em;
+    --bg-footer: rgb(239, 239, 239);
+    --fg-footer: rgb(0, 0, 0);
+    --fs-footer: 1.1em;
 }
+
 body {
     font-family: Lato, sans-serif;
     background-color: rgb(31, 41, 55);
