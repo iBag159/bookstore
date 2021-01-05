@@ -27,17 +27,35 @@
    .card__cellbook__img:hover .book__img-container {
     transition: opacity 0.7s;
     opacity:1 ;
+    
   }  
-   .card__cellbook__img:hover  
+   .book__img-container:hover .card_see_2, .book__img-container:hover .card_see_3 {
+    stroke:var(--primary);
+    fill:var(--bg-header)
+   }
+   .book__img-container:hover .card_addcart_1,
+   .book__img-container:hover .card_favorite_1,
+   .book__img-container:hover .card_see_1{
+    fill:var(--primary);
+    stroke:var(--bg-header)
+   }
+   .book__img-container:hover .card_addcart_2, 
+   .book__img-container:hover .card_addcart_3,
+   .book__img-container:hover .card_favorite_2{
+    fill:var(--bg-header)
+  }
+ 
+
+   .card__cellbook__img:hover  img
    {
-     transition: opacity 0.5s;
+     transition: opacity 0.4s;
      opacity: 0.3;
    }
    .book__img-container {
     opacity:0;
    }
    .card__cellbook__img:hover .book__img-container {
-     transition: opacity 0.7s;
+     transition: opacity 0.4s;
      opacity: 1;
    }
   

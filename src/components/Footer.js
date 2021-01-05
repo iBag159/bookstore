@@ -11,7 +11,7 @@ class Footer extends React.Component{
                         <div className="footer__brand">
                             <span>BOOK STORE</span>
                         </div>
-                        <div className="footer__line"><a href="/"><Icon svg="linef" classes="svg-icon" title="Linefoot"/></a></div>
+                        <div className="footer__line"><Icon svg="linef" classes="svg-icon" title="Linefoot"/></div>
                         
                         <ul className="footer__social-media">
                             <li><a href="/"><Icon svg="facebook" classes="svg-icon" title="Facebook"/></a></li>
