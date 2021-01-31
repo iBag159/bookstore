@@ -1,14 +1,20 @@
 :root {
+    /* Colors */
     --primary: #f86d72;
     --pink: #fbadaf;
     --purple: #e6afcd;
     --lightblue: #96d5e2;
     --bg-header: #fff;
-    --fg-header: #444;
+    --dark-gray: #444;
+    --light-gray: #EAEAEA;
+    --light-gray2:  rgb(239, 239, 239);
+    /* properties */
+    --fg-body: var(--dark-gray);
+    --fg-header: var(--dark-gray);
     --fs-header: 1.1em;
-    --bg-categories: #EAEAEA;
+    --bg-categories: var(--light-gray);
     --tr-categories: .2s all;
-    --bg-footer: rgb(239, 239, 239);
+    --bg-footer: var(--light-gray);
     --fg-footer: rgb(0, 0, 0);
     --fs-footer: 1.1em;
     --fg-info-author: rgb(90, 88, 88);
@@ -18,6 +24,7 @@
 body {
     font-family: Lato, sans-serif;
     background-color: rgb(255, 255, 255);
+    color: var(--fg-body);
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
@@ -35,6 +42,8 @@ p {
 }
 button {
     border: none;
+    cursor: pointer;
+    outline: 0;
 }
 .svg-icon {
     height: var(--fs-header);
@@ -96,8 +105,6 @@ button {
     background: #fff;
     display: inline-block;
     box-shadow: 0 13px 29.4px 0.6px rgba(43,43,43,.25);
-    outline: 0;
-    cursor: pointer;
 }
 .btn-primary:focus,
 .btn-primary:hover {
