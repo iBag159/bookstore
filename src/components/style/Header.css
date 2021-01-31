@@ -1,4 +1,4 @@
-.header{    
+.header {
     background-color: var(--bg-header);
     padding: 2em 0;
     font-size: var(--fs-header);
@@ -7,33 +7,50 @@
 .header__container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
-.header__brand .brand1{
+.header__brand {
+    width: 100%;
+}
+.header__brand .brand1 {
     font-size: 2em;
 }
-.header__brand .brand2{
+.header__brand .brand2 {
     font-size: 1.5em;
 }
 .header__main {
-    display: flex;    
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    left: -300px;
+    transition: .3s left;
+}
+.header__main.active {
+    left: 0;
+    height: 100vh;
+}
+.header__main.active a {
+    padding: 1.5em 4em;
 }
 .header__main > li.active,
 .header__main > li:hover > a,
-.header__main > li ul li:hover > a{
+.header__main > li ul li:hover > a {
     color: var(--primary);
 }
 .header__main > li.active::after,
 .header__main > li:hover::after {
     color: var(--primary);
-    content: '';
+    content: "";
     display: block;
-    width: calc(100% - 1.5em*2);
+    width: calc(100% - 1.5em * 2);
     margin: 0 auto;
     border-bottom: 2px solid var(--primary);
 }
 .header__main a {
     display: block;
-    padding: .5em 1.5em;
+    padding: 0.5em 1.5em;
     text-decoration: none;
 }
 .header__main > li {
@@ -48,9 +65,9 @@
     position: absolute;
     transform: translateY(10px);
     opacity: 0;
-    transition: transform .2s, opacity .6s;
+    transition: transform 0.2s, opacity 0.6s;
     background-color: white;
-    box-shadow: 0 1px 10px 0 hsla(0,0%,56%,.75);
+    box-shadow: 0 1px 10px 0 hsla(0, 0%, 56%, 0.75);
     color: initial;
     z-index: 2;
 }
@@ -67,9 +84,9 @@
 }
 .header__tools a {
     display: block;
-    padding: .5em .8em;
+    padding: 0.5em 0.8em;
 }
-.header__tools li:hover .svg-icon{
+.header__tools li:hover .svg-icon {
     fill: var(--primary);
 }
 .header__tools li {
@@ -79,7 +96,7 @@
     border-radius: 50%;
     background-color: var(--primary);
     color: white;
-    font-size: .8em;
+    font-size: 0.8em;
     padding: 2px;
     position: absolute;
     top: 0;
@@ -87,4 +104,102 @@
     width: 1.2em;
     height: 1.2em;
     text-align: center;
+}
+.btn-nav {
+    height: 100%;
+    background: transparent;
+    padding: .5em;
+}
+.btn-dropdown .btn-navicon, .btn-nav .btn-navicon {
+    background: var(--fg-header);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+.btn-nav .btn-navicon:after, .btn-nav .btn-navicon:before {
+    background: var(--fg-header);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.btn-nav .btn-navicon:before {
+    top: 5px;
+}
+.btn-nav .btn-navicon:after {
+    top: -5px;
+}
+.btn-nav.active .btn-navicon {
+    background: transparent;
+}
+.btn-nav.active .btn-navicon:before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+.btn-nav.active .btn-navicon:after {
+    top: 0;
+    transform: rotate(45deg);
+}
+@media (min-width: 992px) {
+    .header__brand {
+        width: auto;
+    }
+    .header__main > li.active,
+    .header__main > li:hover > a,
+    .header__main > li ul li:hover > a {
+        color: var(--primary);
+    }
+    .header__main > li.active::after,
+    .header__main > li:hover::after {
+        color: var(--primary);
+        content: "";
+        display: block;
+        width: calc(100% - 1.5em * 2);
+        margin: 0 auto;
+        border-bottom: 2px solid var(--primary);
+    }
+    .header__main a {
+        display: block;
+        padding: 0.5em 1.5em;
+        text-decoration: none;
+    }
+    .header__main > li {
+        pointer-events: all;
+        opacity: 1;
+    }
+    .header__main li:hover ul {
+        pointer-events: initial;
+    }
+    .header__main li > ul {
+        pointer-events: none;
+        position: absolute;
+        transform: translateY(10px);
+        opacity: 0;
+        transition: transform 0.2s, opacity 0.6s;
+        background-color: white;
+        box-shadow: 0 1px 10px 0 hsla(0, 0%, 56%, 0.75);
+        color: initial;
+        z-index: 2;
+    }
+    .header__main li > ul li {
+        border-bottom: 1px solid #f5f5f5;
+    }
+    .header__main li:hover > ul {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@media (min-width: 768px) {
+    .btn-nav {
+        display: none;
+    }
+    .header__main {
+        flex-direction: row;
+        position: static;
+    }
+
 }

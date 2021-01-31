@@ -29,14 +29,6 @@ class Header extends React.Component {
         
                 ]
             },
-            {   id: "3",
-                tag: "Blog",
-                path: "/blog"
-            },
-            {   id: "4",
-                tag: "Portfolio",
-                path: "/portfolio"
-            },
             {
                 id: "5",
                 tag: "Author",
@@ -47,23 +39,34 @@ class Header extends React.Component {
                 tag: "Contact",
                 path: "/contact"
             }
-        ]
+        ],
+        active: false
+    }
+    handleClick = () => {
+        this.setState({
+            active: !this.state.active
+        })
     }
     render() {
         return (
             <header className="header">
                 <div className="header__container container">
                     <div className="header__brand">
-                        <span className="brand1">Book</span>
-                        <span className="brand2"> Store</span>
+                        <span className="brand1">Book </span>
+                        <span className="brand2">Store</span>
                     </div>
-                    <ul className="header__main">
-                        {
-                            this.state.menu.map( ( item ) => {
-                                return <Menu item={item} key={item.id}/>
-                            }) 
-                        }
-                    </ul> 
+                    <nav>
+                        <button className={ `btn-nav ${this.state.active ? "active" : ""}`} onClick={this.handleClick}>
+                            <span className="btn-navicon"></span>
+                        </button>
+                        <ul className={ `header__main ${this.state.active ? "active" : ""}`}>
+                            {
+                                this.state.menu.map( ( item ) => {
+                                    return <Menu item={item} key={item.id}/>
+                                }) 
+                            }
+                        </ul> 
+                    </nav>
                     <ul className="header__tools">
                         <li><a href="/"><Icon svg="search" classes="svg-icon" title="User"/></a></li>
                         <li><a href="/"><Icon svg="favorites" classes="svg-icon" title="Favorites"/><span className="header__tools-badge">5</span></a></li>

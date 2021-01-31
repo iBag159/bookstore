@@ -1,22 +1,24 @@
 import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import Hero from "./components/Hero";
-import CategoryList from "./components/Categories/CategoryList";
-import CellbookList from "./components/CellbookList";
+import Home from "./pages/Home"
+import Book from "./pages/Book"
+import Err404 from "./pages/Error/404"
+
 function App() {
     return (
-        <div className="App">
-            <Header />
-            <main>
-                <Hero />
-                <CategoryList />
-                <CellbookList />
-            
-            </main>
-            
-            <Footer />
-        </div>
+        <BrowserRouter>
+            <div className="App">
+                <Header />
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/book" component={Book}/>
+                    <Route component={Err404}/>
+                </Switch>
+                <Footer />
+            </div>
+        </BrowserRouter>
     );
 }
 
