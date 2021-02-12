@@ -9,7 +9,7 @@ class Category extends React.Component {
                     <Icon svg={this.props.category.icon} classes="svg-icon" title="User"/>
                 </div>
                 <h3 className="category__name">{this.props.category.name}</h3>
-                <p>{this.props.category.description}</p>
+                    {/*<p>{this.props.category.description}</p>*/}
             </a>
         );
     }

@@ -1,7 +1,8 @@
 import React from "react"
 import Hero from "../components/Hero";
 import CategoryList from "../components/Categories/CategoryList";
-import CellbookList from "../components/CellbookList";
+import Book from "../components/Book";
+
 
 class Home extends React.Component {
     componentDidMount() {
@@ -12,15 +13,15 @@ class Home extends React.Component {
         const data = await response.json()
         console.log(data)
     }
-    
     render() {
-        
+        const book= this.props.location.state.book;
         return (
             <main>
-                
                 <Hero />
                 <CategoryList />
-                <CellbookList />
+                <Book book={book}/>
+                
+                
             </main>
         );
     }

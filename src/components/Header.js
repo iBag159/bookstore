@@ -1,52 +1,72 @@
 import React from "react";
+
 import "./style/Header.css";
 import Icon from './Icon'
-import Menu from './Header/Menu'
+import Menu from './Header/Menu';
+
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
+    
     state = {
+        
+        
+
+
         menu : [
             {   id: "1",
-                tag: "Home",
+                tag: "Inicio",
                 path: "/",
             },
             {   id: "2",
-                tag: "Shop",
-                path: "/shop",
+                tag: "Tienda",
+                path: "/tienda",
                 children: [
                     {   id: "2-1",
-                        tag: "Subitem 1",
-                        path: "/shop/subitem1"
+                        tag: "Drama",
+                        path: "/tienda/categoria/drama"
                     },
                     {   id: "2-2",
-                        tag: "Subitem 2",
-                        path: "/shop/subitem2"
+                        tag: "Romance",
+                        path: "/tienda/categoria/romance"
                     },
                     {   id: "2-3",
-                        tag: "Subitem 3",
-                        path: "/shop/subitem3"
+                        tag: "Niños",
+                        path: "/tienda/categoria/niños"
+                    },
+                    {   id: "2-4",
+                        tag: "Ciencias",
+                        path: "/tienda/categoria/ciencias"
+                    },
+                    {   id: "2-5",
+                        tag: "Ver todas las categorias",
+                        path: "/tienda/categorias"
                     },
         
                 ]
             },
             {
                 id: "5",
-                tag: "Author",
-                path: "/author"
+                tag: "Autor",
+                path: "/autor"
             },
             {
                 id: "6",
-                tag: "Contact",
-                path: "/contact"
+                tag: "Contacto",
+                path: "/contacto"
             }
         ],
-        active: false
+        active: false,
+   
+        
     }
     handleClick = () => {
         this.setState({
             active: !this.state.active
         })
     }
+   
+    
     render() {
         return (
             <header className="header">
@@ -68,10 +88,16 @@ class Header extends React.Component {
                         </ul> 
                     </nav>
                     <ul className="header__tools">
-                        <li><a href="/"><Icon svg="search" classes="svg-icon" title="User"/></a></li>
-                        <li><a href="/"><Icon svg="favorites" classes="svg-icon" title="Favorites"/><span className="header__tools-badge">5</span></a></li>
-                        <li><a href="/"><Icon svg="bag" classes="svg-icon" title="Bag"/><span className="header__tools-badge">10</span></a></li>
-                        <li><a href="/"><Icon svg="user" classes="svg-icon" title="User"/></a></li>
+                        <li><a href="/"><Icon svg="search" classes="svg-icon" title="search"/></a></li>
+                        <li><a href="/"><Icon svg="favorites" classes="svg-icon" title="Favorites"/><span className="header__tools-badge">0</span></a></li>
+                        <li >
+                            <Link to="/carrito-compra"><Icon svg="bag" classes="svg-icon" title="Bag"/>
+                            <span className="header__tools-badge">0</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/login"><Icon id="Usericons" svg="user" classes="svg-icon" title="User"/></Link>
+                        </li>
                     </ul>
                 </div>
             </header>

@@ -7,22 +7,22 @@ class CategoryList extends React.Component {
         categories: [
             {
                 name: "Drama",
-                description: "Lorem ipsum blah blah blah blah",
+                description: "",
                 icon: "cat_drama"
             },
             {
                 name: "Romance",
-                description: "Lorem ipsum blah blah blah blah blah blah blah",
+                description: "",
                 icon: "cat_romance"
             },
             {
                 name: "Niños",
-                description: "Odio a los chukyyyyyssss",
+                description: "",
                 icon: "cat_children"
             },
             {
                 name: "Ciencias",
-                description: "Amo las ciencias, aunque no las entienda, odio la religión aunque la entiendo perfectamente.",
+                description: "",
                 icon: "cat_science"
             }
         ]

@@ -1,0 +1,179 @@
+
+
+a{
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	text-decoration: none;
+}
+.text-links{
+    color: var(--color-blue);
+    font-size:0.8em;
+}
+.formLogin-container{
+   
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 80rem;
+	min-height: 83vh;
+	width: 100%;
+	padding: 0 2rem;
+	margin: 0 auto;
+   
+}
+.wrapper-login{
+    max-width: 20rem;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.25rem;
+    color: var(--color-black);
+    background: var(--color-white);
+    box-shadow: var(--shadow-large);
+}
+.form {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+
+}
+.form-control {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: inherit;
+    width: 100%;
+    height: auto;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    color: var(--color-black);
+    background: var(--color-light);
+    text-transform: unset;
+    text-rendering: optimizeLegibility;
+}
+.recovery-form{
+    font-size: 1.7rem;
+    
+}
+.form-group-login {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+.btnform{
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: inherit;
+    cursor: pointer;
+    min-width: 50%;
+    height: auto;
+    padding: 0.65rem 1.25rem;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    color: var(--color-white);
+    background: var( --primary);
+    box-shadow: var(--shadow-medium);
+    
+    text-rendering: optimizeLegibility;
+}
+.btn-registerForm {
+    
+    min-width: 100%;
+}
+.form-register{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size:0.8em;
+    color: var(--color-blue);
+}
+.form-register span{
+   
+    color: var(--color-black);
+}
+.striped-loginForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+.striped-line-loginForm {
+    flex: auto;
+    flex-basis: auto;
+    border: none;
+    outline: none;
+    height: 2px;
+    background: var(--color-grayish);
+}
+
+.striped-text-loginForm {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: inherit;
+    color: var(--color-black);
+    margin: 0 1rem;
+}    
+
+
+.method-control-loginForm {
+    margin-bottom: 1rem;
+    width: 85%;
+}
+
+.method-action-loginForm {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 1.25rem;
+    outline: none;
+    border: 2px solid var(--color-grayish);
+    border-radius: 2rem;
+    color: var(--color-black);
+    background: var(--color-white);
+   
+    text-rendering: optimizeLegibility;
+    transition: all 0.35s ease;
+}
+
+.method-loginForm 
+.method-control-loginForm :hover {
+    background: var(--lightblue);
+}
+
+.method-control-loginForm a .svg-icon {
+    font-size: 1.65rem;
+    line-height: inherit;
+    margin-right: 0.8rem;
+    color: var(--color-blue);
+}
+
+
+.error-login{
+    color: var(--primary);
+    font-size: 0.7rem;
+
+}
+.error-login a{
+    padding: 0 0.7rem
+}
